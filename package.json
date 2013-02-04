@@ -3,7 +3,7 @@
     "readable": "Vladstudio Kirby Amazon SES Plugin",
     "version": "1.0",
     "stable": true,
-    "description": "Send email messages using Amazon SES. Based on SES class by Dan Myers",
+    "description": "Send email messages using Amazon SES. Based on SES class by Dan Myers.",
     "author": "Vlad Gerasimov",
     "url": "http://vladstudio.com/"
 }
