@@ -1,8 +1,8 @@
 <?php
 
-function v_ses($data = array())
+function amazon_ses($data = array())
 {
-	global $v_ses;
+	global $amazon_ses;
 
 	// validate 
 	if (!c::get('email.amazon.key'))
@@ -38,9 +38,9 @@ function v_ses($data = array())
 	}
 
 	// start SES if not started yet
-	if (!$v_ses)
+	if (!$amazon_ses)
 	{
-		$v_ses = new SimpleEmailService(c::get('email.amazon.key'), c::get('email.amazon.secret'));
+		$amazon_ses = new SimpleEmailService(c::get('email.amazon.key'), c::get('email.amazon.secret'));
 	}
 
 	// compose message
@@ -55,7 +55,7 @@ function v_ses($data = array())
 	$m->setMessageFromString($data['body'] ?: null, $data['html'] ?: null);
 
 	// send and return result
-	return $v_ses->sendEmail($m);
+	return $amazon_ses->sendEmail($m);
 }
 
 

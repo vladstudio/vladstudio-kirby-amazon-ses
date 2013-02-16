@@ -25,7 +25,7 @@ Optional default values:
 
     <?php 
     
-    $send_result = v_ses(array(
+    $send_result = amazon_ses(array(
       'to'      => 'John Doe <john@doe.com>',
       'from'    => 'Max Musterman <max@musterman.com>',
       'subject' => 'My first Email',
